@@ -11,6 +11,7 @@ def LandfromUnit(DemPath,OutputPath,Buffer_distance):
         6.以具有标识信息的汇作为倾斜点，计算集水区栅格
         7.集水区栅格转矢量，得到山体单元
     """
+    arcpy.env.overwriteOutput = True
     dem,_ = F.get_file_name_and_path(DemPath)
     demname = dem.split(".tif")[0]
     
