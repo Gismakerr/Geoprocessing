@@ -114,13 +114,31 @@ def clipgeotiff(inputPath, savePath, patchSize, patchIntersection, startCol, sta
             offsetCor[0] = 0  
 
 # 参数设置
-inputPath = r"D:\元迁移学习\实验\Data\附加DEM\丘陵"
-savePath = r"D:\元迁移学习\实验\Data\附加DEM\Clip_500\Hill\Hill"
-patchSize = 360
-patchIntersection = 360
-startCol = 0
-startRow = 0
-decimal_places = 1  # 设定保留小数位数
 
-# 运行裁剪函数
-clipgeotiff(inputPath, savePath, patchSize, patchIntersection, startCol, startRow, decimal_places)
+# base_path = r"D:\南半球高山区一度FABDEM"
+# for root, dirs, _ in os.walk(base_path):  # os.walk 返回 (当前路径, 子目录, 文件)
+#         for dir_name in dirs:
+#             folder_path = os.path.join(root, dir_name)
+#             inputPath = folder_path
+#             savePath = r"D:\一度FABDEM\Output"
+#             patchSize = 100
+#             patchIntersection = 100
+#             startCol = 0
+#             startRow = 0
+#             decimal_places = 1 
+#             clipgeotiff(inputPath, savePath, patchSize, patchIntersection, startCol, startRow, decimal_places)
+
+for i in range(3,10):
+    
+
+
+    folder_path = r"E:\毕业论文\研究生毕业论文\基本数据\结果区域\未裁剪" + "\\" + str(i)
+    inputPath = folder_path
+    savePath = r"E:\毕业论文\研究生毕业论文\基本数据\结果区域\裁剪" + "\\" + str(i)
+    patchSize = 100
+    patchIntersection = 100
+    startCol = 0
+    startRow = 0
+    decimal_places = 1 
+    clipgeotiff(inputPath, savePath, patchSize, patchIntersection, startCol, startRow, decimal_places)
+
